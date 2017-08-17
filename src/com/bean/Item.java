@@ -5,6 +5,20 @@ public class Item {
 	private int item_userid;
 	private String item_time;
 	private String item_str;
+	private int item_star;
+	private String item_starIdStr;
+	public int getItem_star() {
+		return item_star;
+	}
+	public void setItem_star(int item_star) {
+		this.item_star = item_star;
+	}
+	public String getItem_starIdStr() {
+		return item_starIdStr;
+	}
+	public void setItem_starIdStr(String item_starIdStr) {
+		this.item_starIdStr = item_starIdStr;
+	}
 	public int getItem_id() {
 		return item_id;
 	}

@@ -17,12 +17,28 @@
     <servlet-name>loginServlet</servlet-name>
     <url-pattern>/loginServlet</url-pattern>
   </servlet-mapping>
-    <servlet>
-  	<servlet-name>signUpServlet</servlet-name>
-  	<servlet-class>com.servlet.signUpServlet</servlet-class>
+  <servlet>
+    <servlet-name>signUpServlet</servlet-name>
+    <servlet-class>com.servlet.signUpServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>signUpServlet</servlet-name>
-  	<url-pattern>/signUpServlet</url-pattern>
+    <servlet-name>signUpServlet</servlet-name>
+    <url-pattern>/signUpServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>getFollowItemServlet</servlet-name>
+    <servlet-class>com.servlet.getFollowItemServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>getFollowItemServlet</servlet-name>
+    <url-pattern>/getFollowItemServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>getSelfItemServlet</servlet-name>
+    <servlet-class>com.servlet.getSelfItemServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>getSelfItemServlet</servlet-name>
+    <url-pattern>/getSelfItemServlet</url-pattern>
   </servlet-mapping>
 </web-app>

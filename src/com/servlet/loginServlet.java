@@ -36,7 +36,8 @@ public class loginServlet extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.setAttribute("user", user);
 			
-			request.getRequestDispatcher("loginSuccessTest.jsp").forward(request, response);
+			//request.getRequestDispatcher("loginSuccessTest.jsp").forward(request, response);
+			response.sendRedirect("getFollowItemServlet");
 		}
 		else {
 			request.getRequestDispatcher("loginErrorTest.jsp").forward(request, response);
