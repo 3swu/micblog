@@ -12,14 +12,14 @@ import javax.servlet.http.HttpSession;
 
 import com.DAO.getItemDAO;
 import com.DAO.itemSortDAO;
+import com.DAO.showBlogDAO;
 import com.bean.Item;
 import com.bean.User;
 
-public class getSelfItemServlet extends HttpServlet {
+public class getUserItemServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-
-    public getSelfItemServlet() {
+ 
+    public getUserItemServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,7 +28,11 @@ public class getSelfItemServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		HttpSession session = request.getSession();//取得当前session
-		User user = (User)session.getAttribute("user");
+		//User user = (User)session.getAttribute("goalUser");
+		User user = new User();
+		String goalUserNickname = request.getParameter("nickname");
+		user.setUser_nickname(goalUserNickname);
+		user.setUser_id(new showBlogDAO().getIdByNickname(goalUserNickname));
 		getItemDAO getItem = new getItemDAO();
 		ArrayList<Item> items =  getItem.getItemByUser(user);
 		

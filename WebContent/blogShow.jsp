@@ -7,10 +7,11 @@
     	User user = new User();
     	user.setUser_id(item.getItem_userid());
     	loginDAO logindao = new loginDAO();
+    	String nickname =logindao.getNickname(user);
     	out.println("<div align=\"center\">");
     	out.println("<table>");
     	out.println("<tr>");
-    	out.println("<td width=\"300\" height=\"40\">" + logindao.getNickname(user) + "</td>");
+    	out.println("<td width=\"300\" height=\"40\">" + "<a href=\"getUserItemServlet?nickname="+nickname +"\">"+nickname + "</a></td>");
     	out.println("<td width=\"300\">"+ item.getItem_time() +"</td>");
     	out.println("<tr/>");
     	out.println("<tr>");
@@ -22,6 +23,7 @@
     	out.println("</tr>");
     	out.println("</table>");
     	out.println("</div>");
+    	out.println("<hr/>");
     }
     
     %>

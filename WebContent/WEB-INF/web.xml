@@ -41,4 +41,28 @@
     <servlet-name>getSelfItemServlet</servlet-name>
     <url-pattern>/getSelfItemServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>getUserItemServlet</servlet-name>
+    <servlet-class>com.servlet.getUserItemServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>getUserItemServlet</servlet-name>
+    <url-pattern>/getUserItemServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>newBlogServlet</servlet-name>
+    <servlet-class>com.servlet.newBlogServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>newBlogServlet</servlet-name>
+    <url-pattern>/newBlogServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>logoutServlet</servlet-name>
+    <servlet-class>com.servlet.logoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>logoutServlet</servlet-name>
+    <url-pattern>/logoutServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
