@@ -40,6 +40,7 @@ public class getUserItemServlet extends HttpServlet {
 		itemSortDAO sortDAO = new itemSortDAO();
 		Collections.sort(items, sortDAO);
 		session.setAttribute("items", items);
+		session.setAttribute("goalUser", user);
 		response.sendRedirect("showUserBlog.jsp");
 	}
 

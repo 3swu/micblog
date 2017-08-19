@@ -35,6 +35,7 @@ public class getSelfItemServlet extends HttpServlet {
 		//ArrayList结果按时间排序
 		itemSortDAO sortDAO = new itemSortDAO();
 		Collections.sort(items, sortDAO);
+		session.setAttribute("goalUser", user);
 		session.setAttribute("items", items);
 		response.sendRedirect("showUserBlog.jsp");
 	}

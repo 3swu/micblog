@@ -15,7 +15,7 @@
     	out.println("<td width=\"300\">"+ item.getItem_time() +"</td>");
     	out.println("<tr/>");
     	out.println("<tr>");
-    	out.println("<td height=\"200\" colspan=\"2\">"+ item.getItem_str() +"</td>");
+    	out.println("<td height=\"100\" colspan=\"2\">"+ item.getItem_str() +"</td>");
     	out.println("</tr>");
     	out.println("<tr>");
     	out.println("<td height=\"40\">赞:"+ item.getItem_star() +"</td>");

@@ -11,6 +11,9 @@ import com.DAO.loginDAO;
 public class followDAO {
 	//检查是否已经关注
 	public boolean checkIsFollowed(User user,User followUser) {
+		if(user.getUser_id() == followUser.getUser_id())
+			return true;
+		
 		DbConnect dbconn = new DbConnect();
 		String sql = "select * from follow where follow_userid='" + user.getUser_id()
 						+ "' and follow_followuserid='" + followUser.getUser_id() + "'";
@@ -74,7 +77,30 @@ public class followDAO {
 			while(rs.next()) {
 				User u = new User();
 				u.setUser_id(rs.getInt("follow_followuserid"));
-				u.setUser_nickname(new loginDAO().getNickname(user));
+				u.setUser_nickname(new loginDAO().getNickname(u));
+				users.add(u);
+			}
+			return users;
+		}catch(SQLException ex) {
+			ex.printStackTrace();
+			return null;
+		}finally {
+			dbconn.closeConnection();
+		}
+	}
+	
+	public ArrayList<User> getFans(User user){
+		ArrayList<User> users = new ArrayList<User>();
+		DbConnect dbconn = new DbConnect();
+		String sql = "select * from follow where follow_followuserid=" + user.getUser_id();
+		ResultSet rs = dbconn.executeQuery(sql);
+		try {
+			if(rs.getMetaData().getColumnCount() == 0)
+				return null;
+			while(rs.next()) {
+				User u = new User();
+				u.setUser_id(rs.getInt("follow_userid"));
+				u.setUser_nickname(new loginDAO().getNickname(u));
 				users.add(u);
 			}
 			return users;

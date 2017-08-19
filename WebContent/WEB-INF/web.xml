@@ -65,4 +65,28 @@
     <servlet-name>logoutServlet</servlet-name>
     <url-pattern>/logoutServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>followServlet</servlet-name>
+    <servlet-class>com.servlet.followServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>followServlet</servlet-name>
+    <url-pattern>/followServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>getFollowAndFanServlet</servlet-name>
+    <servlet-class>com.servlet.getFollowAndFanServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>getFollowAndFanServlet</servlet-name>
+    <url-pattern>/getFollowAndFanServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>searchUserServlet</servlet-name>
+    <servlet-class>com.servlet.searchUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>searchUserServlet</servlet-name>
+    <url-pattern>/searchUserServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
