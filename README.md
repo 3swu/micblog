@@ -9,4 +9,4 @@ JSP/Servlet/Javabean开发的一个简陋的微博<br>
 <br>
 //用户名：usertest 密码：123456
 <br>
-//用户名：usertest1 密码：123456
+//用户名：usertest2 密码：123456
