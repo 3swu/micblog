@@ -7,12 +7,12 @@ public class DbConnect {
 	private Statement stmt = null;
 	private ResultSet rs = null;
 	
-	//Á¬½ÓÊı¾İ¿â
+	//è¿æ¥æ•°æ®åº“
 	public void getConnection() {
 		final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
 		final String DB_URL = "jdbc:mysql://192.168.1.2/micblog";
 		final String USER = "root";
-		final String PASS = "wulei123";
+		final String PASS = "******";
 		
 		try {
 			Class.forName(JDBC_DRIVER);
@@ -22,9 +22,9 @@ public class DbConnect {
 		}
 	}
 	
-	//Ö´ĞĞ²éÑ¯Óï¾ä£¬´«ÈëSQLÓï¾ä
+	//æ‰§è¡ŒæŸ¥è¯¢è¯­å¥ï¼Œä¼ å…¥SQLè¯­å¥
 	public ResultSet executeQuery(String sql) {
-		getConnection();//»ñÈ¡Êı¾İ¿âÁ¬½Ó
+		getConnection();//è·å–æ•°æ®åº“è¿æ¥
 		
 		try {
 			stmt = conn.createStatement();
@@ -36,9 +36,9 @@ public class DbConnect {
 		}
 	}
 	
-	//×¨ÃÅÓÃÓÚÖ´ĞĞÔöÉ¾¸Ä²Ù×÷
+	//ä¸“é—¨ç”¨äºæ‰§è¡Œå¢åˆ æ”¹æ“ä½œ
 	public void executeOther(String sql) {
-		getConnection();//»ñÈ¡Êı¾İ¿âÁ¬½Ó
+		getConnection();//è·å–æ•°æ®åº“è¿æ¥
 		try {
 			stmt = conn.createStatement();
 			stmt.execute(sql);
